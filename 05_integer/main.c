@@ -6,11 +6,26 @@
  * 版  本： V1.0
  * 日  期： 2026/01/11
  ******************************************************************************/
-#include <stdio.h>         // 包含的系统头文件
+#include <stdio.h>   // 包含的系统头文件
+#include "integer.h" // 包含的自定义头文件
 
+/******************************************************************************
+ @brief      : 主函数
+ @param[in]  : argc 命令行参数个数
+ @param[in]  : argv 命令行参数数组
+ @return     : 0 成功 非0 失败
+ @note       : 无
+ *****************************************************************************/
 int main(int argc, char** argv)
 {
-    int positive_integer = 10;      // 定义一个正整数变量
-    int negative_integer = -10;     // 定义一个负整数变量
+    int positive_integer = 10;  // 定义一个正整数变量
+    int negative_integer = -10; // 定义一个负整数变量
+
+    SizeInteger();              // 调用函数，查看整型类型的大小
+    SizeIntegerConstant();      // 调用函数，查看整型常量的大小
+    SizeIntegerVariable();      // 调用函数，查看整型变量的大小
+    DifferentBase();            // 调用函数，查看八进制、十进制、十六进制
+    OverflowType();             // 调用函数，查看溢出类型
+
     return 0;
 }
